@@ -9,8 +9,6 @@ exports.run = async (bot, message, args) => {
     
   try{      
 
-  } catch (e) {
-      
   }
 }
 
