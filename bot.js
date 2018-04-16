@@ -8,8 +8,6 @@ const momentDurationFormat = require("moment-duration-format");
 const fs = require("fs");
 
 
-var prefix = ')';
-
 
 bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
@@ -27,11 +25,10 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     
-        let msg = message.content.toLowerCase();
-        let sender = message.author;
-        let args = message.content.slice(prefix.length).trim().split(" ");
-        let cmd = args.shift().toLowerCase();
-        if (!message.content.startsWith(prefix)) return;
+    let prefix = config.prefix;
+    let msg = message.content.toLowerCase();
+    let args = message.content.slice(prefix.length).trim().split(" ");
+    let cmd = args.shift().toLowerCase();
       
     try {
       let commandFile = require(`./cmds/${cmd}.js`);
