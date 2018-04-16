@@ -6,7 +6,7 @@ const bot = new Discord.Client({disableEveryone: true});
 const moment = require("moment");
 const momentDurationFormat = require("moment-duration-format");
 const fs = require("fs");
-const config = require("./config.json")
+const config = require("./config.json");
 
 var prefix = ')';
 
