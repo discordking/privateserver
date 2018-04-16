@@ -5,7 +5,7 @@ const economy = require('discord-eco');
 const bot = new Discord.Client({disableEveryone: true});
 const moment = require("moment");
 const momentDurationFormat = require("moment-duration-format");
-
+const fs = require("fs");
 
 
 var prefix = ')';
@@ -27,11 +27,13 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     
-        let msg = message.content.toLowerCase();
+        let msg = message.content.split(" ");
         let sender = message.author;
         let args = message.content.slice(prefix.length).trim().split(" ");
         let cmd = args.shift().toLowerCase();
         if (!message.content.startsWith(prefix)) return;
+    
+    if (!msg.startsWith(prefix)) return;
   
     try {
       let commandFile = require(`./cmds/${cmd}.js`);
@@ -106,6 +108,18 @@ bot.on('guildMemberRemove', member => {
 bot.on('guildMemberRemove', member => {
     console.log(`${member}` + "has left" + `${member.guild.name}` + "Sending leave message now")
     console.log("Leave Message Sent")
+});
+
+bot.on("guildMemberAdd", member => {
+	let autorole = JSON.parse(fs.readFileSync("./autorole.json", "utf8"));
+	if (!autorole[member.guild.id]) { // jika tidak ada autorole yang di set, agar tidak error saat ada yang join
+		autorole[member.guild.id] = {
+			autorole: config.autorole
+		};
+	}
+	var role = autorole[member.guild.id].role;
+	if (!role) return; // jika autorole 0 maka akan dihentikan dan tidak menyebabkan error
+	member.addRole(role);
 });
 
 
