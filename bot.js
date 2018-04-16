@@ -7,7 +7,7 @@ const moment = require("moment");
 const momentDurationFormat = require("moment-duration-format");
 const fs = require("fs");
 
-
+var prefix = ')';
 
 bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
@@ -25,7 +25,6 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     
-    let prefix = config.prefix;
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
