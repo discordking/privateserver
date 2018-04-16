@@ -6,10 +6,6 @@ exports.run = async (bot, message, args) => {
     let kReason = args.join(" ").slice(22);
 
        message.guild.member(kUser).ban(kReason);
-    
-  try{      
-
-  }
 }
 
 module.exports.help = {
