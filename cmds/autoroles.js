@@ -26,5 +26,5 @@ exports.run = async (bot, message, args) => {
 }
 
 exports.help = {
-	name: "autoroles"
+	name: "autorole"
 }
