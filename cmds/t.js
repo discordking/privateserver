@@ -5,7 +5,7 @@ exports.run = async (bot, message, args) => {
     if(!kUser) return message.channel.send("Can't find user!");
     let kReason = args.join(" ").slice(22);
 
-       message.guild.member(kUser).ban(kReason);
+       message.guild.member(kUser).kick(kReason);
 }
 
 module.exports.help = {
