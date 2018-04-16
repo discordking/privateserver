@@ -27,7 +27,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     
-        let message = message.content.split(" ");
+        let msg = message.content.split(" ");
         let sender = message.author;
         let args = message.content.slice(prefix.length).trim().split(" ");
         let cmd = args.shift().toLowerCase();
