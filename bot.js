@@ -32,9 +32,7 @@ bot.on("message", async message => {
         let args = message.content.slice(prefix.length).trim().split(" ");
         let cmd = args.shift().toLowerCase();
         if (!message.content.startsWith(prefix)) return;
-    
-    if (!message.startsWith(prefix)) return;
-  
+      
     try {
       let commandFile = require(`./cmds/${cmd}.js`);
       commandFile.run(bot, message, args);
