@@ -5,20 +5,18 @@ exports.run = async (bot, message, args) => {
   if(!rUser) return message.channel.send("Could't find `user`.");
   let reason = args.join(" ").slice(22);
 
-  let reportEmbed = new Discord.RichEmbed()
-  .setTitle("Reports📫")
-        .setColor("#9A2EFE")
+  let warnembed = new Discord.RichEmbed()
+  .setTitle("Warned📫")
+   .setColor("#9A2EFE")
   .addField("Reported User:", `${rUser}`)
   .addField("Reported By:", `${message.author}`)
   .addField("Channel:", message.channel)
   .addField("Time:", message.createdAt)
   .addField("Reason:", reason);
 
-  let reportschannel = message.guild.channels.find(`name`, "report");
-  if(!reportschannel) return message.channel.send("Couldn't find `#report` channel.");
+   rUser.send(warnembed);
 
   message.delete().catch(O_o=>{});
-  reportschannel.send(reportEmbed);
 
   return;
 }
