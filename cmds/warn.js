@@ -12,9 +12,9 @@ exports.run = async (bot, message, args) => {
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("You Warned !!")
      .setColor("#9A2EFE")
-    .addField("Kicked User", `${kUser}}`)
+    .addField("Warned User", `${kUser}}`)
     .addField("Kicked By", `<@${message.author.id}>`)
-    .addField("Kicked In", message.channel)
+    .addField("Warned In", message.channel)
     .addField("Tiime", message.createdAt)
     .addField("Reason", kReason);
 
