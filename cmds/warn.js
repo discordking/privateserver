@@ -13,7 +13,7 @@ exports.run = async (bot, message, args) => {
     .setDescription("You Warned !!")
      .setColor("#9A2EFE")
     .addField("Warned User", `${kUser}}`)
-    .addField("Kicked By", `<@${message.author.id}>`)
+    .addField("Warned By", `<@${message.author.id}>`)
     .addField("Warned In", message.channel)
     .addField("Tiime", message.createdAt)
     .addField("Reason", kReason);
