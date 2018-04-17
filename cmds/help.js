@@ -13,7 +13,7 @@ exports.run = async (bot, message, args) => {
 .addField('Fun:','`say` `vote`', true)
 .addField('Image:','`cat` `dog` `slap`', true)
 .addField('Support Bot:','`votebot` `channel` `invite`', true)
-.addField('Music:','`play` `pause` `resume` `volume` `stop` `skip` `np` `queue`', true)
+.addField('Music:','`play` `pause` `resume` `volume` `stop` `skip` `np` `queue`')
         .setColor("#9A2EFE")
 .setFooter('©Beta | By: Alfian Verter | 2018')
 message.channel.send(patrick);
