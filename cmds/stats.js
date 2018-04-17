@@ -12,7 +12,6 @@ exports.run = async (bot, message, args) => {
               .addField(`⛄️ Users :`, `${bot.users.size} Users`)
               .addField(`🕘 Uptime :`, `${uptime}`)
               .addField(`📺 Version :`, `${VERSION}`)
-              .addField('📟 Cpu usage :', `${Math.round(cpu * 100) / 100}%`)
               .addField(`💾 Ram usage :`, `${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)} MB`)
               .addField(`🔰 Creator : `, `${CREATOR}`)
         .setColor("#9A2EFE")
