@@ -63,7 +63,7 @@ bot.on("message", async autoresponder => {
 });
 
 bot.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome-leave');
+    let channel = member.guild.channels.find('name', 'member-log');
     let memberavatar = member.user.displayAvatarURL;
         if (!channel) return;
         let embed = new Discord.RichEmbed()
@@ -87,7 +87,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('guildMemberRemove', member => {
-    let channel = member.guild.channels.find('name', 'welcome-leave');
+    let channel = member.guild.channels.find('name', 'member-log');
     let memberavatar = member.user.displayAvatarURL;
         if (!channel) return;
         let embed = new Discord.RichEmbed()
