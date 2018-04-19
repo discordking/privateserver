@@ -11,7 +11,7 @@ exports.run = async (bot, message, args) => {
 .addField('»Generator','`Anime` `ascii`')
 .addField('»Moderation','`kick` `ban` `warn` `autoroles`')
 .addField('»Utility','`avatar` `weather` `clear`')
-.addField('»Fun','`say` `vote` `8ball` `joke`')
+.addField('»Fun','`say` `vote` `8ball` `joke` `roll`')
 .addField('»Image','`cat` `dog` `slap` `twice`')
 .addField('»Support Bot','`votebot` `channel` `invite`')
 .addField('»Music','`play` `pause` `resume` `volume` `stop` `skip` `np` `queue`')
