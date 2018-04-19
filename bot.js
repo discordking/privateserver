@@ -68,7 +68,7 @@ bot.on('guildMemberAdd', member => {
     let memberavatar = member.user.displayAvatarURL;
         if (!channel) return;
         let embed = new Discord.RichEmbed()
-        .setColor("#9A2EFE")
+.setColor("#00FFBF")
         .setThumbnail(memberavatar)
         .addField(':bust_in_silhouette: | name : ', `${member}`)
         .addField(':microphone2: | Welcome!', `Welcome to the server, ${member}`)
@@ -92,7 +92,7 @@ bot.on('guildMemberRemove', member => {
     let memberavatar = member.user.displayAvatarURL;
         if (!channel) return;
         let embed = new Discord.RichEmbed()
-        .setColor("#9A2EFE")
+.setColor("#00FFBF")
         .setThumbnail(memberavatar)
         .addField(':bust_in_silhouette: | Name:', `${member}`)
         .addField('Has Let the Server', 'Good Bye !')
