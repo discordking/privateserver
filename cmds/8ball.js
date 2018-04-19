@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
   let question = args.slice(0).join(" ");
   let ballembed = new Discord.RichEmbed()
   .setAuthor(message.author.tag)
-  .setColor("#42f453")
+.setColor("#00FFBF")
   .addField("🎱Question", question)
   .addField("🎱Answer", replies[result]);
   message.channel.send(ballembed);
