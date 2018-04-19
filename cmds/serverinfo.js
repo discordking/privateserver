@@ -1,5 +1,4 @@
 const Discord = require('discord.js'); 
-const botconfig = require('../botconfig.json');
 
 module.exports.run = async (bot, message, args) => {
   let guild = message.guild;
@@ -27,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
 
   let embed = new Discord.RichEmbed()
   .setTitle(`Server Stats`)
-  .setColor(botconfig.white)
+  .setColor("#00FFBF")
   .setThumbnail(icon)
   .addField('Guild Name', guild.name, true)
   .addField('Guild ID', guild.id, true)
