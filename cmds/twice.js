@@ -35,7 +35,7 @@ var slap = [
         "http://cdn2.tstatic.net/style/foto/bank/images/momo-twice_20170202_130506.jpg",
 ]
 var embed = new Discord.RichEmbed()
-        .setDescription(`Random Image Slap !`)
+        .setDescription(`Random Twice :D`)
         .setImage(slap[Math.floor(Math.random() * slap.length)])
 .setColor("#00FFBF")
 message.channel.send(embed)
@@ -44,5 +44,5 @@ message.channel.send(embed)
 }
 
 exports.help = {
-  name: "neko"
+  name: "twice"
 }
