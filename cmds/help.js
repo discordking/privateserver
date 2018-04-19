@@ -14,8 +14,8 @@ exports.run = async (bot, message, args) => {
 .addField('Image:','`cat` `dog` `slap`')
 .addField('Support Bot:','`votebot` `channel` `invite`')
 .addField('Music:','`play` `pause` `resume` `volume` `stop` `skip` `np` `queue`')
-        .setColor("#9A2EFE")
-.setThumbnail(bicon)
+.setColor("#00FFBF")
+  .setThumbnail(bicon)
 .setFooter('©Beta | By: Alfian Verter | 2018')
 message.channel.send(patrick);
 }
