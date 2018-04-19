@@ -6,7 +6,7 @@ let {body} = await superagent
 .get("nekos.life/api/pat")
 var catembed = new Discord.RichEmbed()
 .setTitle('I will always wipe you :*')
-        .setColor("#9A2EFE")
+.setColor("#00FFBF")
 .setImage(body.url)
 message.channel.send(catembed)
 }
