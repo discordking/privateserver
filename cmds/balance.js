@@ -6,8 +6,8 @@ exports.run = async (bot, message, args) => {
           economy.fetchBalance(message.author.id + message.guild.id).then((i) => {
             const embed = new Discord.RichEmbed()
                 .setDescription(`**${message.guild.name} Bank**`)
-        .setColor("#9A2EFE")
-                .addField('Account Holder',message.author.username, true) 
+.setColor("#00FFBF")
+            .addField('Account Holder',message.author.username, true) 
                 .addField('Account Balance',i.money, true)
 
 
