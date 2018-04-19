@@ -11,7 +11,7 @@ exports.run = async (bot, message, args) => {
 .addField('Moderation:','`kick` `ban` `warn` `autoroles`')
 .addField('Utility:','`avatar` `weather` `clear`')
 .addField('Fun:','`say` `vote`')
-.addField('Image:','`cat` `dog` `slap`')
+.addField('Image:','`cat` `dog` `slap` `twice` ')
 .addField('Support Bot:','`votebot` `channel` `invite`')
 .addField('Music:','`play` `pause` `resume` `volume` `stop` `skip` `np` `queue`')
 .setColor("#00FFBF")
