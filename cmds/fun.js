@@ -17,6 +17,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("`t!poke`", "Poke a user.")
     .addField("`t!slots`", "Roll the slots!")
     .addField("`t!test`", "Test if the the bot is online :information_desk_person: ")
+   .setColor("#00FFBF")
     message.channel.send(embed)
 }
 module.exports.help = {
