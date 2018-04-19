@@ -5,7 +5,7 @@ let ping = Date.now() - message.createdTimestamp
 let embed = new Discord.RichEmbed()
 .setTitle('Your ping results:')
 .addField('Signal :signal_strength:',`${ping}ms`, true)
-.addField('💞 Websocket' , `${Math.round(bot.ping)} ms`, false)
+.addField('Websocket 💞' , `${Math.round(bot.ping)} ms`, false)
 .setColor("#00FFBF")
 .setFooter('©Beta | By: Alfian Verter | 2018')
 message.channel.send({embed})
