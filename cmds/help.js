@@ -9,7 +9,7 @@ exports.run = async (bot, message, args) => {
 .addField('»Core','`help` `ping` `stats` `welcome`')
 .addField('»Economy','`balance` `addbalance`')
 .addField('»Generator','`Anime` `ascii`')
-.addField('»Moderation','`kick` `ban` `warn` `autoroles`')
+.addField('»Moderation','`kick` `ban` `warn` `autoroles` `addrole`')
 .addField('»Utility','`avatar` `weather` `clear`')
 .addField('»Fun','`say` `vote` `8ball` `joke` `roll`')
 .addField('»Image','`cat` `dog` `slap` `twice`')
