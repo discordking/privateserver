@@ -29,7 +29,7 @@ module.exports = class extends Command {
         return msg.channel.send(`***<@${user.id}>, you've been given a cookie by <@${msg.author.id}>!***`, { embed: embed });
     }
 
-}
+};
 module.exports.help = {
   name: "8ball"
 }
