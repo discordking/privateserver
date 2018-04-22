@@ -8,6 +8,7 @@ const momentDurationFormat = require("moment-duration-format");
 const fs = require("fs");
 const config = require("./config.json");
 const figlet = require('figlet');
+const Command = require("klasa");
 
 var prefix = ')';
 
