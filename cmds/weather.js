@@ -16,7 +16,7 @@ exports.run = async (bot, message, args) => {
               .setDescription(`**${current.skytext}**`)
               .setAuthor(`Weather for ${current.observationpoint}`) 
               .setThumbnail(current.imageUrl)
-.setColor("#00FFBF")
+.setColor("RANDOM")
           .addField('Timezone',`UTC${location.timezone}`, true) 
               .addField('Temperature',`${current.temperature}°C`, true)
               .addField('Feels Like', `${current.feelslike}°C`, true)
