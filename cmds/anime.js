@@ -30,7 +30,7 @@ module.exports.run = (bot, message, args) => {
               .addField(`»Type`,`${anime.type[0]}`,true)
               .addField(`»Start Date`, anime.start_date[0], true)
               .addField(`»End Date`, anime.end_date[0], true)
-              .setColor(`${message.guild.me.displayHexColor!=='#000000' ? message.guild.me.displayHexColor : 0xffffff}`)
+              .setColor("RANDOM")
         });
       })}
     }).auth('CCsP', 'BonkRunner124210');
