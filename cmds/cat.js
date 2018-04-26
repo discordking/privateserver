@@ -7,7 +7,7 @@ module.exports.run = async (bot,message,args) => {
   .get(`aws.random.cat/meow`);
 
   let catembed = new Discord.RichEmbed()
-.setColor("#00FFBF")
+.setColor("RANDOM")
   .setTitle(`${message.author.username} | Your cat!`)
   .setImage(body.file);
 
