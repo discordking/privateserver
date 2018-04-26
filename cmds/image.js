@@ -6,7 +6,7 @@ let {body} = await superagent
 .get("aws.random.cat/meow")
 var catembed = new Discord.RichEmbed()
 .setTitle('Here is your random cat!')
-.setColor("#00FFBF")
+.setColor("RANDOM")
 .setImage(body.file)
 message.channel.send(catembed)
 }
