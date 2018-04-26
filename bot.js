@@ -10,13 +10,13 @@ const config = require("./config.json");
 const figlet = require('figlet');
 const Command = require("klasa");
 
-var prefix = ')';
+var prefix = '>';
 
 bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
     console.log(`${bot.user.username} is ready!`)
     
-bot.user.setUsername("VerterOS")
+bot.user.setUsername("Exodus")
             
     function randomStatus() {
         let status = [`on ${bot.guilds.size} servers.`, `with ${bot.users.size.toLocaleString()} users.`, 'mention @Cosmic', 'type )help']
