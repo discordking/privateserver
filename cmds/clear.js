@@ -10,7 +10,7 @@ exports.run = async (bot, message, args) => {
       }
 
       if (!insert) {
-          message.channel.send('🚫 usage : `)clear <1 - 400>`');
+          message.channel.send('🚫 usage : `>clear <1 - 400>`');
           message.delete();
           return;
       }
