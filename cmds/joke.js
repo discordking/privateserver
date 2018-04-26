@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
         let jEmbed = new Discord.RichEmbed()
         .setTitle("Joke")
         .setDescription(body.joke)
-.setColor("#00FFBF")
+.setColor("RANDOM")
         message.channel.send(jEmbed);
     }
 module.exports.help = {
