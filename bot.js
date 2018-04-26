@@ -19,7 +19,7 @@ bot.on("ready", async () => {
 bot.user.setUsername("Exodus")
             
     function randomStatus() {
-        let status = [`on ${bot.guilds.size} servers.`, `with ${bot.users.size.toLocaleString()} users.`, 'mention @Cosmic', 'type )help']
+        let status = [`>on ${bot.guilds.size} servers<`, `>with ${bot.users.size.toLocaleString()} users<`, '>mention @Exodus<', 'Use >help']
           let rstatus = Math.floor(Math.random() * status.length);
         bot.user.setActivity(status[rstatus], {type: 'STREAMING'});
     }; setInterval(randomStatus, 20000)
@@ -70,8 +70,8 @@ bot.on('guildMemberAdd', member => {
     let memberavatar = member.user.displayAvatarURL;
         if (!channel) return;
         let embed = new Discord.RichEmbed()
-.setColor("#00FFBF")
-        .setThumbnail(memberavatar)
+.setColor("RANDOM")
+	.setThumbnail(memberavatar)
         .addField(':bust_in_silhouette: | name : ', `${member}`)
         .addField(':microphone2: | Welcome!', `Welcome to the server, ${member}`)
         .addField(':family_mwgb: | Your are the member', `${member.guild.memberCount}`)
@@ -94,8 +94,8 @@ bot.on('guildMemberRemove', member => {
     let memberavatar = member.user.displayAvatarURL;
         if (!channel) return;
         let embed = new Discord.RichEmbed()
-.setColor("#00FFBF")
-        .setThumbnail(memberavatar)
+.setColor("RANDOM")
+	.setThumbnail(memberavatar)
         .addField(':bust_in_silhouette: | Name:', `${member}`)
         .addField('Has Let the Server', 'Good Bye !')
         .addField(':family_mwgb: | The server now as', `${member.guild.memberCount}` + " members")
