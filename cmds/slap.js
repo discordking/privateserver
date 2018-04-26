@@ -27,7 +27,7 @@ var slap = [
 var embed = new Discord.RichEmbed()
         .setDescription(`Random Image Slap !`)
         .setImage(slap[Math.floor(Math.random() * slap.length)])
-.setColor("#00FFBF")
+.setColor("RANDOM")
 message.channel.send(embed)
 
 
