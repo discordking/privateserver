@@ -16,10 +16,10 @@ bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
     console.log(`${bot.user.username} is ready!`)
     
-bot.user.setUsername("Empire")
+bot.user.setUsername("CreamCray")
             
     function randomStatus() {
-        let status = [`>on ${bot.guilds.size} servers<`, `>with ${bot.users.size.toLocaleString()} users<`, '>mention @Ultimate Gamer<', 'Use >help']
+        let status = [`>on ${bot.guilds.size} servers<`, `>with ${bot.users.size.toLocaleString()} users<`, '>mention @CreamCray<', 'Use >help']
           let rstatus = Math.floor(Math.random() * status.length);
         bot.user.setActivity(status[rstatus], {type: 'STREAMING'});
     }; setInterval(randomStatus, 20000)
