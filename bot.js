@@ -16,7 +16,7 @@ bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
     console.log(`${bot.user.username} is ready!`)
     
-bot.user.setUsername("Ultimate Gamer")
+bot.user.setUsername("Empire")
             
     function randomStatus() {
         let status = [`>on ${bot.guilds.size} servers<`, `>with ${bot.users.size.toLocaleString()} users<`, '>mention @Ultimate Gamer<', 'Use >help']
