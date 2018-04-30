@@ -54,13 +54,13 @@ bot.on("message", async autoresponder => {
         if (autoresponder.content.startsWith(prefix)) return;
     
     if (autoresponder.content === `<@!${bot.user.id}>`) {
-    autoresponder.react('👍');
-    return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``)help`` ')
+    autoresponder.react('🍥');
+    return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
     }
     
     if (autoresponder.content === `<@${bot.user.id}>`) {
-    autoresponder.react('👍');
-    return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``)help`` ')
+    autoresponder.react('🍥');
+    return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
     }
         
 });
