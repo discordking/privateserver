@@ -19,7 +19,7 @@ bot.on("ready", async () => {
 bot.user.setUsername("Ultimate Gamer")
             
     function randomStatus() {
-        let status = [`>on ${bot.guilds.size} servers<`, `>with ${bot.users.size.toLocaleString()} users<`, '>mention @Okami<', 'Use >help']
+        let status = [`>on ${bot.guilds.size} servers<`, `>with ${bot.users.size.toLocaleString()} users<`, '>mention @Ultimate Gamer<', 'Use >help']
           let rstatus = Math.floor(Math.random() * status.length);
         bot.user.setActivity(status[rstatus], {type: 'STREAMING'});
     }; setInterval(randomStatus, 20000)
