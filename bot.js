@@ -10,8 +10,6 @@ const config = require("./config.json");
 const figlet = require('figlet');
 const Command = require("klasa");
 
-var prefix = '>';
-
 bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
     console.log(`${bot.user.username} is ready!`)
