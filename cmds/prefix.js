@@ -3,7 +3,11 @@ const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
 
-  if(!message.member.hasPermission("MANAGE_SERVER")) return message.reply("No no no.");
+      if (!message.member.permissions.has("MANAGE_MESSAGES")) {
+          message.channel.send('You do not have ``Manage Messages`` permissions');
+          message.delete();
+          return;
+      }
   if(!args[0] || args[0 == "help"]) return message.reply("Usage: !prefix <desired prefix here>");
 
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
