@@ -9,8 +9,7 @@ const fs = require("fs");
 const config = require("./config.json");
 const figlet = require('figlet');
 const Command = require("klasa");
-
-var prefix = ">"
+const prefix = require("./config.json");
 
 bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
