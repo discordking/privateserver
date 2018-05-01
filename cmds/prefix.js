@@ -4,7 +4,7 @@ const fs = require("fs");
 module.exports.run = async (bot, message, args) => {
 
       if (!message.member.permissions.has("MANAGE_MESSAGES")) {
-          message.channel.send('You do not have ``Manage Messages`` permissions');
+          message.channel.send('You do not have ``Manage Messages`` permissions \n to use the command: `CLEAR`');
           message.delete();
           return;
       }
