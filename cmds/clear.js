@@ -4,7 +4,7 @@ exports.run = async (bot, message, args) => {
   async function purge() {
       let insert = args.join(" ");
       if (!message.member.permissions.has("MANAGE_MESSAGES")) {
-          message.channel.send('You do not have ``Manage Messages`` permissions');
+          message.channel.send('You do not have ``Manage Messages`` permissions \n to use the command: `PREFIX`');
           message.delete();
           return;
       }
