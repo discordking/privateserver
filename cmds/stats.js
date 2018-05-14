@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const moment = require("moment");
 const VERSION = "V1.1"
-const CREATOR = "Cream Cray"
+const CREATOR = "Alfian Verter"
 
 exports.run = async (bot, message, args) => {
 
