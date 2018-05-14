@@ -28,7 +28,7 @@ exports.run = async (bot, message, args) => {
          .setTitle('Clean! :put_litter_in_its_place:  ')
          .setDescription(`${insert} messages deleted.`)
 .setColor("RANDOM")
-     .setFooter('©Beta | By: Cream Cray | 2018')
+.setFooter('©BOT-OFFICIAL-RAINBOW | By: Alfian Verter | 2018')
      message.channel.send(embed)
      message.delete();
   }
