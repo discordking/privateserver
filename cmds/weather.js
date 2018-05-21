@@ -22,7 +22,7 @@ exports.run = async (bot, message, args) => {
               .addField('Feels Like', `${current.feelslike}°C`, true)
               .addField('Winds',current.winddisplay, true)
               .addField('Humidity', `${current.humidity}%`, true)
-.setFooter('©BOT-GAME-ZONE | By: Alfian Verter | 2018')
+.setFooter('©AVbot | By: Alfian Verter | 2018')
               message.channel.send(embed)
         });
 }
