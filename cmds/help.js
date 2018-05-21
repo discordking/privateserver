@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 exports.run = async (bot, message, args) => {
   let bicon = bot.user.displayAvatarURL;
   let patrick = new Discord.RichEmbed()
-.setAuthor('☄  Hello, i am Game Zone  ☄', bot.user.avatarURL)
+.setAuthor('☄  Hello, i am AVbot', bot.user.avatarURL)
 .setDescription('this is a feature I give to you | use this prefix `>`')
 .addField('»Anime Image','`neko` `pat`')
 .addField('»Core','`help` `ping` `stats` `welcome`')
@@ -17,7 +17,7 @@ exports.run = async (bot, message, args) => {
 .addField('»Music','`play` `pause` `resume` `volume` `stop` `skip` `np` `queue`')
 .setColor("RANDOM")
   .setThumbnail(bicon)
-.setFooter('©BOT-GAME-ZONE | By: Alfian Verter | 2018')
+.setFooter('©AVbot | By: Alfian Verter | 2018')
 message.channel.send(patrick);
 }
 
