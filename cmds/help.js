@@ -17,7 +17,7 @@ exports.run = async (bot, message, args) => {
 .addField('»Music','`play` `pause` `resume` `volume` `stop` `skip` `np` `queue`')
 .setColor("RANDOM")
   .setThumbnail(bicon)
-.setFooter('©AVbot | By: Alfian Verter | 2018')
+.setFooter('©BOT-GAME-ZONE | By: Alfian Verter | 2018')
 message.channel.send(patrick);
 }
 
