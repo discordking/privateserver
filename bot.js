@@ -15,7 +15,7 @@ bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
     console.log(`${bot.user.username} is ready!`)
     
-bot.user.setUsername("Game Zone")
+bot.user.setUsername("Joker Squad")
             
     function randomStatus() {
         let status = [`on ${bot.guilds.size}🌎 servers.`, `with ${bot.users.size.toLocaleString()}🎭 users`, 'mention @Game Zone', 'Use >help']
@@ -99,7 +99,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('guildMemberRemove', member => {
-    let channel = member.guild.channels.find('name', 'member-log');
+    let channel = member.guild.channels.find('name', '◀-welcome-goodbye-▶');
     let memberavatar = member.user.displayAvatarURL;
         if (!channel) return;
         let embed = new Discord.RichEmbed()
