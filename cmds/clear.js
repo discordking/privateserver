@@ -28,7 +28,7 @@ exports.run = async (bot, message, args) => {
          .setTitle('Clean! :put_litter_in_its_place:  ')
          .setDescription(`${insert} messages deleted.`)
 .setColor("RANDOM")
-.setFooter('©BOT-GAME-ZONE | By: Alfian Verter | 2018')
+.setFooter('©IndoXploit | By: Phenom | 2018')
      message.channel.send(embed)
      message.delete();
   }
