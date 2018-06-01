@@ -15,7 +15,7 @@ bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
     console.log(`${bot.user.username} is ready!`)
     
-bot.user.setUsername("Joker Squad")
+bot.user.setUsername("IndoXploit")
             
     function randomStatus() {
         let status = [`on ${bot.guilds.size}🌎 servers.`, `with ${bot.users.size.toLocaleString()}🎭 users`, 'mention @Joker Squad', 'Use >help']
