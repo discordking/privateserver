@@ -24,13 +24,13 @@ module.exports.run = (bot, message, args) => {
               .addField(`»Synopsis`, decode(anime.synopsis[0].replace(/<[^>]*>/g, ''), false).split('\n')[0])
               .addField(`»English Title`,`${anime.english[0]!='' ? anime.english[0] : '­'}`,false)
               .addField(`»Episodes`,`${anime.episodes[0]!='' ? anime.episodes[0] : '­'}`,true)
-              .addField(`External Link:`,`${anime.id[0]!='' ? `[MyAnimeList](https://myanimelist.net/anime/${anime.id[0]})` : '­'}`,true)
+           //   .addField(`External Link:`,`${anime.id[0]!='' ? `[MyAnimeList](https://myanimelist.net/anime/${anime.id[0]})` : '­'}`,true)
               .addField(`»Score`,`${anime.score[0]!='' ? anime.score[0] : '­'}`,true)
               .addField(`»Status`,`${anime.status[0]}`,true)
               .addField(`»Type`,`${anime.type[0]}`,true)
               .addField(`»Start Date`, anime.start_date[0], true)
               .addField(`»End Date`, anime.end_date[0], true)
-              .setColor("RANDOM")
+              .setColor(`${message.guild.me.displayHexColor!=='#000000' ? message.guild.me.displayHexColor : 0xffffff}`)
         });
       })}
     }).auth('CCsP', 'BonkRunner124210');
