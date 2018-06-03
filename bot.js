@@ -75,7 +75,7 @@ bot.on("message", async autoresponder => {
 });
 
 bot.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'member-log');
+    let channel = member.guild.channels.find('name', '◀-welcome-goodbye-▶');
     let memberavatar = member.user.displayAvatarURL;
         if (!channel) return;
         let embed = new Discord.RichEmbed()
