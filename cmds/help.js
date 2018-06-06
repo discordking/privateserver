@@ -8,7 +8,7 @@ exports.run = async (bot, message, args) => {
 .addField('»Anime Image','`neko` `pat`')
 .addField('»Core','`help` `ping` `stats` `welcome` `userstats` `serverinfo`')
 .addField('»Economy','`balance` `addbalance`')
-.addField('»Generator','`ascii` `translate')
+.addField('»Generator','`ascii` `translate`')
 .addField('»Moderation','`kick` `ban` `warn` `autoroles` `addrole`')
 .addField('»Utility','`avatar` `weather` `clear` `prefix`')
 .addField('»Fun','`say` `vote` `8ball` `joke` `roll` `auto` `quiz`')
