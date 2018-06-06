@@ -134,7 +134,7 @@ bot.on("guildMemberAdd", member => {
 bot.on('message', message => {
 
     // Variables
-    let prefix = '~';
+    let prefix = '>';
     let msg = message.content.toUpperCase();
     // Lets also add some new variables
     let cont = message.content.slice(prefix.length).split(" "); // This slices off the prefix, then stores everything after that in an array split by spaces.
@@ -236,7 +236,7 @@ bot.on('message', message => {
     }
 
     // Ping - Let's create a quick command to make sure everything is working!
-    if (message.content.toUpperCase() === `>TOLOL`) {
+    if (message.content.toUpperCase() === `${prefix}TOLOL`) {
         message.channel.send('Pong!');
     }
 
