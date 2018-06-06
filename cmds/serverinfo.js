@@ -41,7 +41,7 @@ module.exports.run = async (bot, message, args) => {
   .addField('Text Channels', voiceChannels, true)
   .addField('Roles', `${guild.roles.size}`, true)
   .addField('Emojis', `${guild.emojis.size}`, true)
-.setFooter('©BOT-GAME-ZONE | By: Alfian Verter | 2018')
+.setFooter('©BETA | By: VERTER | 2018')
 
   return message.channel.send(embed);
 }
