@@ -17,7 +17,7 @@ exports.run = async (bot, message, args) => {
 .addField('»Music','`play` `pause` `resume` `volume` `stop` `skip` `np` `queue`')
 .setColor("RANDOM")
   .setThumbnail(bicon)
-.setFooter('©IndoXploit | By: Phenom | 2018')
+.setFooter('©BETA | By: VERTER | 2018')
 message.channel.send(patrick);
 }
 
