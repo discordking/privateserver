@@ -243,15 +243,6 @@ bot.on('message', message => {
         message.channel.send('Pong!');
     }
 
-    // Add / Remove Money For Admins
-    if (msg.startsWith(`${prefix}ADDMONEY`)) {
-
-        // Check if they have the modRole
-        if (!message.member.roles.find("name", modRole)) { // Run if they dont have role...
-            message.channel.send('**You need the role `' + modRole + '` to use this command...**');
-            return;
-        }
-
         // Check if they defined an amount
         if (!args[0]) {
             message.channel.send(`**You need to define an amount. Usage: ${prefix}BALSET <amount> <user>**`);
