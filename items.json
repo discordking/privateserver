@@ -1,0 +1,10 @@
+{
+"ping": {
+"type":"Command",
+"desc":"Buying This Gives You Acces To Use The Ping Command."
+}
+"Helper":"Helper Role",
+"type":"Role",
+"desc":"Buying This Gives You The Helper Role."
+}
+}
