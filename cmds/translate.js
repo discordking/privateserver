@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
         const embed = new Discord.RichEmbed()
             .setColor("RANDOM")
-            .setDescription("**Provide a language to translate into.**\nUsage: `t!translate <language> <text>`");
+            .setDescription("**Provide a language to translate into.**\nUsage: `>translate <language> <text>`");
 
         return message.channel.send(embed);
 
