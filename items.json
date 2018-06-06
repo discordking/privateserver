@@ -1,5 +1,5 @@
 {
-"ping": {
+"Ping": {
 "name": "Ping Command",
 "type":"Command",
 "price":"100",
@@ -10,5 +10,11 @@
      "type":"Role",
      "price":"250",
      "desc":"Buying This Gives You The Helper Role."
-    }
+    },
+    "newCommand": {
+        "name":"newCommand",
+        "type":"newType",
+        "price":"220",
+        "desc":"Buyin"
+  }
 }
