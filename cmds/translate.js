@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
 
         if (args.length === undefined) {
 
-            return message.channel.send('**Please give me something to translate.** `t!translate <language> <text>`');
+            return message.channel.send('**Please give me something to translate.** `>translate <language> <text>`');
 
         } else {
 
