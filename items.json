@@ -1,19 +1,19 @@
 {
     "Grand Master": {
      "name":"Grand Master",
-     "type":"Roles",
+     "type":"Role",
      "price":"130000",
      "desc":"Mempunyai Permis Room GM !! Create Command Spesial :* | Allow Mention @everyone @here"
 },
     "Platinum": {
      "name":"Platinum",
-     "type":"Roles",
+     "type":"Role",
      "price":"75000",
      "desc":"Mempunyai Permis Room Platinum !! Allow Mention @everyone @here "
 },
     "Silver": {
      "name":"Silver",
-     "type":"Roles",
+     "type":"Role",
      "price":"35000",
      "desc":"No Permis :X Allow Mention @everyone"
   }
