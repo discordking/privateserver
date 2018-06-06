@@ -11,7 +11,7 @@ return message.channel.send("This command only works in `bot-invite` channel.")
 bot.fetchUser(args[0]).then(i => {
 let embed = new Discord.RichEmbed()
 .setTitle("Bot added to Queue!")
-.setDescription(`Thanks you ${message.author} for inviting your bot. It will be first tested and reviewed before [inviting](https://discordapp.com/oauth2/authorize?client_id=${args[0]}&permissions=8&scope=bot), so please be patient.`)
+.setDescription(`Thanks you ${message.author} for inviting your bot. It will be first tested and reviewed before [inviting](https://discordapp.com/oauth2/authorize?client_id=${args[0]}&permissions=0&scope=bot), so please be patient.`)
 .addField("Inviter", `\`${message.author.username}\``, true)
 .addField("ID", `\`${args[0]}\``, true)
 .addField("Prefix", `\`${args[1]}\``, true)
