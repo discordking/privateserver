@@ -1,10 +1,14 @@
 {
 "ping": {
+"name": "Ping Command",
 "type":"Command",
+"price":"100",
 "desc":"Buying This Gives You Acces To Use The Ping Command."
 }
-"Helper":"Helper Role",
-"type":"Role",
-"desc":"Buying This Gives You The Helper Role."
-}
+    "Helper": {
+     "name":"Helper Role",
+     "type":"Role",
+     "price":"250",
+     "desc":"Buying This Gives You The Helper Role."
+    }
 }
