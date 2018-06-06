@@ -236,7 +236,7 @@ bot.on('message', message => {
     }
 
     // Ping - Let's create a quick command to make sure everything is working!
-    if (message.content.toUpperCase() === `${prefix}PING`) {
+    if (message.content.toUpperCase() === `>PING`) {
         message.channel.send('Pong!');
     }
 
