@@ -10,6 +10,9 @@ const config = require("./config.json");
 const figlet = require('figlet');
 const Command = require("klasa");
 const prefix = require("./config.json");
+const modRole = 'Administrator';
+
+const items = JSON.parse(fs.readFileSync('items.json', 'utf8'));
 
 bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
