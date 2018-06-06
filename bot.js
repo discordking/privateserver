@@ -167,7 +167,7 @@ bot.on('message', message => {
             // Now that we have the categories we can start the embed
             const embed = new Discord.RichEmbed()
                 .setDescription(`Available Items`)
-                .setColor(0xD4AF37)
+                .setColor('RANDOM')
 
             for (var i = 0; i < categories.length; i++) { // This runs off of how many categories there are. - MAKE SURE YOU DELETE THAT = IF YOU ADDED IT.
 
