@@ -131,7 +131,7 @@ bot.on("guildMemberAdd", member => {
 	member.addRole(role);
 });
 
-client.on('message', message => {
+bot.on('message', message => {
 
     // Variables
     let prefix = '~';
