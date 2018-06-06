@@ -4,7 +4,7 @@
 "type":"Command",
 "price":"100",
 "desc":"Buying This Gives You Acces To Use The Ping Command."
-}
+},
     "Helper": {
      "name":"Helper Role",
      "type":"Role",
