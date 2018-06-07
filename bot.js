@@ -14,7 +14,7 @@ let coins = require("./coins.json");
 let xp = require("./xp.json");
 let cooldown = new Set();
 let cdseconds = 5;
-bot.commands = new Discord.Collection();
+
 
 bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
@@ -23,7 +23,7 @@ bot.on("ready", async () => {
 bot.user.setUsername("VERTER")
             
     function randomStatus() {
-        let status = [`on ${bot.guilds.size}🌎 servers.`, `with ${bot.users.size.toLocaleString()}🎭 users`, 'mention @VERTER', 'Use >help']
+        let status = [`on ${bot.guilds.size}ðŸŒŽ servers.`, `with ${bot.users.size.toLocaleString()}ðŸŽ­ users`, 'mention @VERTER', 'Use >help']
           let rstatus = Math.floor(Math.random() * status.length);
         bot.user.setActivity(status[rstatus], {type: 'STREAMING'});
     }; setInterval(randomStatus, 20000)
@@ -68,12 +68,12 @@ bot.on("message", async autoresponder => {
         if (autoresponder.content.startsWith(prefix)) return;
     
     if (autoresponder.content === `<@!${bot.user.id}>`) {
-    autoresponder.react('🍥');
+    autoresponder.react('ðŸ¥');
     return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
     }
     
     if (autoresponder.content === `<@${bot.user.id}>`) {
-    autoresponder.react('🍥');
+    autoresponder.react('ðŸ¥');
     return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
     }
         
@@ -134,10 +134,25 @@ bot.on("guildMemberAdd", member => {
 	var role = autorole[member.guild.id].role;
 	if (!role) return; // jika autorole 0 maka akan dihentikan dan tidak menyebabkan error
 	member.addRole(role);
-
 });
-	
+
 bot.on("message", async message => {
+
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+  let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+  if(!prefixes[message.guild.id]){
+    prefixes[message.guild.id] = {
+      prefixes: config.prefix
+    };
+  }
+
+  if(!coins[message.author.id]){
+    coins[message.author.id] = {
+      coins: 0
+    };
+  }
 
   let coinAmt = Math.floor(Math.random() * 15) + 1;
   let baseAmt = Math.floor(Math.random() * 15) + 1;
@@ -152,13 +167,12 @@ bot.on("message", async message => {
   let coinEmbed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#0000FF")
-  .addField("💸", `${coinAmt} coins added!`);
+  .addField("ðŸ’¸", `${coinAmt} coins added!`);
 
   message.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
   }
 
   let xpAdd = Math.floor(Math.random() * 7) + 8;
-  console.log(xpAdd);
 
   if(!xp[message.author.id]){
     xp[message.author.id] = {
@@ -207,5 +221,5 @@ bot.on("message", async message => {
   }, cdseconds * 1000)
 
 });
-	
+
 bot.login(process.env.BOT_TOKEN);
