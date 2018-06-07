@@ -17,7 +17,7 @@ let cdseconds = 5;
 const botconfig = require("./config.json");
 bot.commands = new Discord.Collection();
 
-fs.readdir("./commands/", (err, files) => {
+fs.readdir("./cmds/", (err, files) => {
 
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
@@ -27,7 +27,7 @@ fs.readdir("./commands/", (err, files) => {
   }
 
   jsfile.forEach((f, i) =>{
-    let props = require(`./commands/${f}`);
+    let props = require(`./cmds/${f}`);
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
   });
