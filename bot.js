@@ -208,18 +208,6 @@ bot.on("message", async message => {
     cooldown.add(message.author.id);
   }
 
-
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-  let commandfile = bot.commands(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
-
-  setTimeout(() => {
-    cooldown.delete(message.author.id)
-  }, cdseconds * 1000)
-
 });
 
 bot.login(process.env.BOT_TOKEN);
