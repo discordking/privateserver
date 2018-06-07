@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
   .setAuthor(message.author.username)
   .setFooter("Coin Kamu Sekarang, dapatkan coin dengan Online Setiap harinya !!")
   .setColor("#00FF00")
-  .addField(":moneybag: : ${uCoins}");
+  .addField(`:moneybag: : ${uCoins}`);
 
   message.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
 
