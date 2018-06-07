@@ -57,15 +57,18 @@ bot.on("message", async message => {
     } finally {
       console.log(`${message.author.tag} menggunakan perintah ${prefix}${cmd}`);
     }
-	
+});
+
+bot.on("message", async message => {
+  let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
     message.delete();
     return message.reply("You have to wait 5 seconds between commands.")
   }
- // if(!message.member.hasPermission("ADMINISTRATOR")){
+  //if(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
- //}
+ // }
 
 
   let messageArray = message.content.split(" ");
