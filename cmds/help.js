@@ -7,7 +7,7 @@ exports.run = async (bot, message, args) => {
 .setDescription('this is a feature I give to you | use this prefix `>`')
 .addField('»Anime Image','`neko` `pat`')
 .addField('»Core','`help` `ping` `stats` `welcome` `userstats` `serverinfo`')
-.addField('»Economy','`balance` `addbalance` `coins`')
+.addField('»Economy','`balance` `addbalance` `coins` `xp`')
 .addField('»Generator','`ascii` `translate`')
 .addField('»Moderation','`kick` `ban` `warn` `autoroles` `addrole` `removerole`')
 .addField('»Utility','`avatar` `weather` `clear` `prefix`')
