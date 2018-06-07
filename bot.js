@@ -14,6 +14,7 @@ let coins = require("./coins.json");
 let xp = require("./xp.json");
 let cooldown = new Set();
 let cdseconds = 5;
+bot.commands = new Discord.Collection();
 
 fs.readdir("./cmds/", (err, files) => {
 
