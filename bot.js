@@ -41,31 +41,8 @@ bot.on("message", async message => {
 			
 		};
 	}
-	let prefix = prefixes[message.guild.id].prefixes;
-    
-    let msg = message.content.toLowerCase();
-    let args = message.content.slice(prefix.length).trim().split(" ");
-    let cmd = args.shift().toLowerCase();
 
-   if (!msg.startsWith(prefix)) return;
-      
-    try {
-      let commandFile = require(`./cmds/${cmd}.js`);
-      commandFile.run(bot, message, args);
-    } catch (e) {
-      console.log(e.message)
-    } finally {
-      console.log(`${message.author.tag} menggunakan perintah ${prefix}${cmd}`);
-    }
-
-
-  if(!coins[message.author.id]){
-    coins[message.author.id] = {
-      coins: 0
-    };
-  }
-
-  let coinAmt = Math.floor(Math.random() * 15) + 1;
+let coinAmt = Math.floor(Math.random() * 15) + 1;
   let baseAmt = Math.floor(Math.random() * 15) + 1;
 
   if(coinAmt === baseAmt){
@@ -90,6 +67,29 @@ bot.on("message", async message => {
     xp[message.author.id] = {
       xp: 0,
       level: 1
+    };
+  }
+	let prefix = prefixes[message.guild.id].prefixes;
+    
+    let msg = message.content.toLowerCase();
+    let args = message.content.slice(prefix.length).trim().split(" ");
+    let cmd = args.shift().toLowerCase();
+
+   if (!msg.startsWith(prefix)) return;
+      
+    try {
+      let commandFile = require(`./cmds/${cmd}.js`);
+      commandFile.run(bot, message, args);
+    } catch (e) {
+      console.log(e.message)
+    } finally {
+      console.log(`${message.author.tag} menggunakan perintah ${prefix}${cmd}`);
+    }
+
+
+  if(!coins[message.author.id]){
+    coins[message.author.id] = {
+      coins: 0
     };
   }
 
