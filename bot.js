@@ -41,7 +41,7 @@ bot.on("message", async message => {
 			
 		};
 	}
-
+	let prefix = prefixes[message.guild.id].prefixes;
 let coinAmt = Math.floor(Math.random() * 15) + 1;
   let baseAmt = Math.floor(Math.random() * 15) + 1;
 
@@ -69,7 +69,6 @@ let coinAmt = Math.floor(Math.random() * 15) + 1;
       level: 1
     };
   }
-	let prefix = prefixes[message.guild.id].prefixes;
     
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
