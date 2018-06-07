@@ -7,7 +7,7 @@ let embed = new Discord.RichEmbed()
 .addField('Signal :signal_strength:',`${ping}ms`, true)
 .addField('Websocket 💞' , `${Math.round(bot.ping)} ms`, false)
 .setColor("RANDOM")
-.setFooter('©BOT-GAME-ZONE | By: Alfian Verter | 2018')
+.setFooter('©BETA | By: VERTER | 2018')
 message.channel.send({embed})
 }
 
