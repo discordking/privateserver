@@ -10,7 +10,6 @@ const config = require("./config.json");
 const figlet = require('figlet');
 const Command = require("klasa");
 const prefix = require("./config.json");
-const modRole = 'Administrator';
 let coins = require("./coins.json");
 
 
