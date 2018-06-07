@@ -4,6 +4,8 @@ const weather = require("weather-js");
 const economy = require('discord-eco');
 const bot = new Discord.Client({disableEveryone: true});
 const moment = require("moment");
+const botconfig = require("./config.json");
+bot.commands = new Discord.Collection();
 const momentDurationFormat = require("moment-duration-format");
 const fs = require("fs");
 const config = require("./config.json");
@@ -14,8 +16,6 @@ let coins = require("./coins.json");
 let xp = require("./xp.json");
 let cooldown = new Set();
 let cdseconds = 5;
-const botconfig = require("./config.json");
-bot.commands = new Discord.Collection();
 
 fs.readdir("./cmds/", (err, files) => {
 
