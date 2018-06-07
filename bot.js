@@ -12,8 +12,6 @@ const Command = require("klasa");
 const prefix = require("./config.json");
 let coins = require("./coins.json");
 let xp = require("./xp.json");
-let cooldown = new Set();
-let cdseconds = 10;
 
 
 bot.on("ready", async () => {
@@ -203,9 +201,6 @@ bot.on("message", async message => {
   if(cooldown.has(message.author.id)){
     message.delete();
     return message.reply("You have to wait 10 seconds between commands.")
-  }
-  if(!message.member.hasPermission("ADMINISTRATOR")){
-    cooldown.add(message.author.id);
   }
 
 });
