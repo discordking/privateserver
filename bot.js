@@ -158,7 +158,7 @@ bot.on("message", async message => {
   let coinEmbed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#0000FF")
-  .addField("💸", `${coinAmt} coins added!`);
+  .addField("💸", `BOM Coin kamu bertambah !! ${coinAmt} `);
 
   message.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
   }
