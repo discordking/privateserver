@@ -57,8 +57,7 @@ bot.on("message", async message => {
     } finally {
       console.log(`${message.author.tag} menggunakan perintah ${prefix}${cmd}`);
     }
-  });
-
+});
   let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
@@ -67,7 +66,7 @@ bot.on("message", async message => {
   }
  // if(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
- }
+ //}
 
 
   let messageArray = message.content.split(" ");
