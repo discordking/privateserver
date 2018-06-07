@@ -49,12 +49,6 @@ bot.on("message", async message => {
       prefixes: botconfig.prefix
     };
   }
-
-  if(!coins[message.author.id]){
-    coins[message.author.id] = {
-      coins: 0
-    };
-  }
 	
   let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
