@@ -12,7 +12,7 @@ const Command = require("klasa");
 const prefix = require("./config.json");
 let coins = require("./coins.json");
 let xp = require("./xp.json");
-let cooldown = new Set();
+let cooldown = new Set(10);
 let cdseconds = 5;
 
 
@@ -202,7 +202,7 @@ bot.on("message", async message => {
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
     message.delete();
-    return message.reply("You have to wait 5 seconds between commands.")
+    return message.reply("You have to wait 10 seconds between commands.")
   }
   if(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
