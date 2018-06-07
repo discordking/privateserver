@@ -23,7 +23,7 @@ bot.on("ready", async () => {
 bot.user.setUsername("VERTER")
             
     function randomStatus() {
-        let status = [`on ${bot.guilds.size}ðŸŒŽ servers.`, `with ${bot.users.size.toLocaleString()}ðŸŽ­ users`, 'mention @VERTER', 'Use >help']
+        let status = [`on ${bot.guilds.size}servers.`, `with ${bot.users.size.toLocaleString()} users`, 'mention @VERTER', 'Use >help']
           let rstatus = Math.floor(Math.random() * status.length);
         bot.user.setActivity(status[rstatus], {type: 'STREAMING'});
     }; setInterval(randomStatus, 20000)
