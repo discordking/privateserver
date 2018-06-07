@@ -41,27 +41,11 @@ bot.on("message", async message => {
 			
 		};
 	}
-	  let prefix = prefixes[message.guild.id].prefixes;
-  if(!message.content.startsWith(prefix)) return;
-  if(cooldown.has(message.author.id)){
-    message.delete();
-    return message.reply("You have to wait 5 seconds between commands.")
-  }
-  if(!message.member.hasPermission("ADMINISTRATOR")){
-    cooldown.add(message.author.id);
-  }
-
-
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
-
-  setTimeout(() => {
-    cooldown.delete(message.author.id)
-  }, cdseconds * 1000)
+	let prefix = prefixes[message.guild.id].prefixes;
+    
+    let msg = message.content.toLowerCase();
+    let args = message.content.slice(prefix.length).trim().split(" ");
+    let cmd = args.shift().toLowerCase();
 
    if (!msg.startsWith(prefix)) return;
       
@@ -73,6 +57,26 @@ bot.on("message", async message => {
     } finally {
       console.log(`${message.author.tag} menggunakan perintah ${prefix}${cmd}`);
     }
+  });
+
+bot.on("message", async autoresponder => {
+    if(autoresponder.author.bot) return;
+    if(autoresponder.channel.type === "dm") return;
+      
+        let msg = autoresponder.content.toLowerCase();
+        let sender = autoresponder.author;
+        if (autoresponder.content.startsWith(prefix)) return;
+    
+    if (autoresponder.content === `<@!${bot.user.id}>`) {
+    autoresponder.react('ðŸ¥');
+    return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
+    }
+    
+    if (autoresponder.content === `<@${bot.user.id}>`) {
+    autoresponder.react('ðŸ¥');
+    return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
+    }
+        
 });
 
 
