@@ -13,7 +13,7 @@ const prefix = require("./config.json");
 let coins = require("./coins.json");
 let xp = require("./xp.json");
 let cooldown = new Set();
-let cdseconds = 5;
+let cdseconds = 10;
 
 
 bot.on("ready", async () => {
