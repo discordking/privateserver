@@ -47,30 +47,14 @@ bot.on("message", async message => {
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
 
-   if (!msg.startsWith(prefix)) return;
-      
-    try {
-      let commandFile = require(`./cmds/${cmd}.js`);
-      commandFile.run(bot, message, args);
-    } catch (e) {
-      console.log(e.message)
-    } finally {
-      console.log(`${message.author.tag} menggunakan perintah ${prefix}${cmd}`);
-    }
-});
-
-bot.on("message", async message => {
-  let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
     message.delete();
     return message.reply("You have to wait 5 seconds between commands.")
   }
-  //if(!message.member.hasPermission("ADMINISTRATOR")){
+ //f(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
- // }
-
-
+ //}
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
@@ -82,6 +66,16 @@ bot.on("message", async message => {
     cooldown.delete(message.author.id)
   }, cdseconds * 1000)
 
+   if (!msg.startsWith(prefix)) return;
+      
+    try {
+      let commandFile = require(`./cmds/${cmd}.js`);
+      commandFile.run(bot, message, args);
+    } catch (e) {
+      console.log(e.message)
+    } finally {
+      console.log(`${message.author.tag} menggunakan perintah ${prefix}${cmd}`);
+    }
 });
 
 bot.on("message", async autoresponder => {
