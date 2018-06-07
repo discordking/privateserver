@@ -149,6 +149,8 @@ bot.on("guildMemberAdd", member => {
 	var role = autorole[member.guild.id].role;
 	if (!role) return; // jika autorole 0 maka akan dihentikan dan tidak menyebabkan error
 	member.addRole(role);
+
+});
 	
 bot.on("message", async message => {
 
