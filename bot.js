@@ -67,7 +67,7 @@ bot.on("message", async message => {
   }
  // if(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
-  //}
+ }
 
 
   let messageArray = message.content.split(" ");
