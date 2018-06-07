@@ -12,6 +12,7 @@ const Command = require("klasa");
 const prefix = require("./config.json");
 let coins = require("./coins.json");
 let xp = require("./xp.json");
+let cooldown = new Set();
 
 
 bot.on("ready", async () => {
