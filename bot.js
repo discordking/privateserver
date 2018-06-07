@@ -14,8 +14,6 @@ const modRole = 'Administrator';
 let coins = require("./coins.json");
 
 
-const items = JSON.parse(fs.readFileSync('items.json', 'utf8'));
-
 bot.on("ready", async () => {
     console.log(`Logged in as : ${bot.user.tag}`);
     console.log(`${bot.user.username} is ready!`)
