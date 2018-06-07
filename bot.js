@@ -61,14 +61,13 @@ bot.on("message", async message => {
 
   let coinAmt = Math.floor(Math.random() * 15) + 1;
   let baseAmt = Math.floor(Math.random() * 15) + 1;
-  console.log(`${coinAmt} ; ${baseAmt}`);
 
   if(coinAmt === baseAmt){
     coins[message.author.id] = {
       coins: coins[message.author.id].coins + coinAmt
     };
   fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
-    if (err) console.log(err)
+	  
   });
   let coinEmbed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
@@ -103,7 +102,7 @@ bot.on("message", async message => {
     message.channel.send(lvlup).then(msg => {msg.delete(5000)});
   }
   fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
-    if(err) console.log(err)
+	  
   });
   let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
