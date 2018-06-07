@@ -72,7 +72,7 @@ bot.on("message", async message => {
       console.log(e.message)
     } finally {
       console.log(`${message.author.tag} menggunakan perintah ${prefix}${cmd}`);
-
+    }
 });
 
 
