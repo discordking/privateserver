@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
   let coinEmbed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-  .setFooter("Coin Kamu Sekarang")
+  .setFooter("Coin Kamu Sekarang, dapatkan coin dengan Online Setiap harinya !!")
   .setColor("#00FF00")
   .addField(":moneybag: ", uCoins);
 
