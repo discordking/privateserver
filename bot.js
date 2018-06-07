@@ -187,6 +187,6 @@ bot.on("message", async message => {
   }
   fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
     if(err) console.log(err)
-  });
+  })
 
 bot.login(process.env.BOT_TOKEN);
