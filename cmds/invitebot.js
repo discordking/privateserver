@@ -23,5 +23,5 @@ channel.send(embed).then(msg => msg.react('⏳'))
 }
 }
 module.exports.help = {
-name: "invite"
+name: "invitebot"
 }
