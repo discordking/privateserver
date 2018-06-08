@@ -34,5 +34,5 @@ message.channel.send(embed)
 }
 
 exports.help = {
-  name: "neko"
+  name: "slap"
 }
