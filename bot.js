@@ -87,12 +87,12 @@ bot.on("message", async autoresponder => {
         if (autoresponder.content.startsWith(prefix)) return;
     
     if (autoresponder.content === `<@!${bot.user.id}>`) {
-    autoresponder.react('ðŸ¥');
+    autoresponder.react(':red_car:');
     return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
     }
     
     if (autoresponder.content === `<@${bot.user.id}>`) {
-    autoresponder.react('ðŸ¥');
+    autoresponder.react(':red_car:');
     return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
     }
         
