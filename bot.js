@@ -52,37 +52,41 @@ bot.on("message", async message => {
     };
   }
 
-  let prefix = prefixes[message.guild.id].prefixes;
-  if(!message.content.startsWith(prefix)) return;
-  if(cooldown.has(message.author.id)){
-    message.delete();
-    return message.reply("You have to wait 5 seconds between commands.")
+  if(!coins[message.author.id]){
+    coins[message.author.id] = {
+      coins: 0
+    };
   }
-  if(!message.member.hasPermission("ADMINISTRATOR")){
-    cooldown.add(message.author.id);
+
+  let coinAmt = Math.floor(Math.random() * 15) + 1;
+  let baseAmt = Math.floor(Math.random() * 15) + 1;
+  console.log(`${coinAmt} ; ${baseAmt}`);
+
+  if(coinAmt === baseAmt){
+    coins[message.author.id] = {
+      coins: coins[message.author.id].coins + coinAmt
+    };
+  fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
+    if (err) console.log(err)
+  });
+  let coinEmbed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#0000FF")
+  .addField("💸", `${coinAmt} coins added!`);
+
+  message.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
   }
-	
-  let prefix = prefixes[message.guild.id].prefixes;
-  if(!message.content.startsWith(prefix)) return;
-  if(cooldown.has(message.author.id)){
-    message.delete();
-    return message.reply("You have to wait 5 seconds between commands.")
+
+  let xpAdd = Math.floor(Math.random() * 7) + 8;
+  console.log(xpAdd);
+
+  if(!xp[message.author.id]){
+    xp[message.author.id] = {
+      xp: 0,
+      level: 1
+    };
   }
- // if(!message.member.hasPermission("ADMINISTRATOR")){
-    cooldown.add(message.author.id);
- // }
 
-
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
-
-  setTimeout(() => {
-    cooldown.delete(message.author.id)
-  }, cdseconds * 1000)
 
   let curxp = xp[message.author.id].xp;
   let curlvl = xp[message.author.id].level;
@@ -100,6 +104,29 @@ bot.on("message", async message => {
   fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
     if(err) console.log(err)
   });
+  let prefix = prefixes[message.guild.id].prefixes;
+  if(!message.content.startsWith(prefix)) return;
+  if(cooldown.has(message.author.id)){
+    message.delete();
+    return message.reply("You have to wait 5 seconds between commands.")
+  }
+  //if(!message.member.hasPermission("ADMINISTRATOR")){
+    cooldown.add(message.author.id);
+ // }
+
+
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot,message,args);
+
+  setTimeout(() => {
+    cooldown.delete(message.author.id)
+  }, cdseconds * 1000)
+
+});
 
 
 bot.on("message", async autoresponder => {
