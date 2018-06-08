@@ -64,7 +64,6 @@ bot.on("message", async message => {
 
   if(coinAmt === baseAmt){
     coins[message.author.id] = {
-      coins: coins[message.author.id].coins + coinAmt
     };
   fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
     if (err) console.log(err)
@@ -78,7 +77,6 @@ bot.on("message", async message => {
   }
 
   let xpAdd = Math.floor(Math.random() * 7) + 8;
-  console.log(xpAdd);
 
   if(!xp[message.author.id]){
     xp[message.author.id] = {
