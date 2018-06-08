@@ -71,7 +71,7 @@ bot.on("message", async message => {
   let coinEmbed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#0000FF")
-  .addField("💸", `${coinAmt} coins added!`);
+  .addField("ðŸ’¸", `${coinAmt}:large_blue_circle:  coins added! :clap::skin-tone-3: `);
 
   message.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
   }
@@ -93,9 +93,9 @@ bot.on("message", async message => {
   if(nxtLvl <= xp[message.author.id].xp){
     xp[message.author.id].level = curlvl + 1;
     let lvlup = new Discord.RichEmbed()
-    .setTitle("Level Up!")
-    .setColor(purple)
-    .addField("New Level", curlvl + 1);
+    .setTitle("LEVEL UP BRO :trophy: ")
+    .setColor('RANDOM')
+    .addField("New Level :pencil: ", curlvl + 1);
 
     message.channel.send(lvlup).then(msg => {msg.delete(5000)});
   }
@@ -136,12 +136,12 @@ bot.on("message", async autoresponder => {
         if (autoresponder.content.startsWith(prefix)) return;
     
     if (autoresponder.content === `<@!${bot.user.id}>`) {
-    autoresponder.react('ðŸ¥');
+    autoresponder.react(':hotsprings: ');
     return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
     }
     
     if (autoresponder.content === `<@${bot.user.id}>`) {
-    autoresponder.react('ðŸ¥');
+    autoresponder.react(':hotsprings: ');
     return autoresponder.channel.send(`Hi ${sender},` + ' use this command ``>help`` ')
     }
         
